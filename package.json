@@ -1,0 +1,34 @@
+{
+  "name": "@falcon.io/prm",
+  "version": "0.0.1-alpha.1",
+  "description": "Poly Repository Manager",
+  "main": "dist/inext.js",
+  "types": "dist/inext.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "prm": "dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "ts-node ./src/cli.ts",
+    "run": "tsc && node ./dist/cli.js"
+  },
+  "author": "Natarajan Ganapathi",
+  "license": "MIT",
+  "dependencies": {
+    "@falcon.io/cli": "^0.0.1-alpha.1",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

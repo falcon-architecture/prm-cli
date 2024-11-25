@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" # Location of your package.json file
+    schedule:
+      interval: "daily" # Check for updates daily
+    commit-message:
+      prefix: "deps"
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of your GitHub Actions workflows
+    schedule:
+      interval: "daily"
