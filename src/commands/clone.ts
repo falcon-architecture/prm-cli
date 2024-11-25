@@ -1,6 +1,6 @@
 import { Command, AbstractCommand } from '@falcon.io/cli';
 import { join } from 'path';
-import { GitBuilder, SimpleGit } from '../shared';
+import { GitBuilder, SimpleGit, config } from '../shared';
 import { IProjectsConfig, IProjectConfig, IInitConfig } from './';
 
 export class Clone extends AbstractCommand {
@@ -79,7 +79,7 @@ export class Clone extends AbstractCommand {
     }
     
     private getRepoUrl(owner: string, repoName: string): string {
-        const GitHubToken = process.env.GITHUB_TOKEN;
+        const GitHubToken = config.GitHubToken;
         return `https://${GitHubToken}@github.com/${owner}/${repoName}.git`;
     }
 }
