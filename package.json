@@ -16,8 +16,7 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
-    "test": "ts-node ./src/cli.ts",
-    "run": "tsc && node ./dist/cli.js"
+    "test": "ts-node ./src/cli.ts --help"
   },
   "author": "Natarajan Ganapathi",
   "license": "MIT",
